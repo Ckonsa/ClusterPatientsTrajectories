@@ -1,4 +1,4 @@
-# ClusterPatientsDrugTrajectories
+# ClusterPatientsTrajectories
 
 For English, see below.
 
