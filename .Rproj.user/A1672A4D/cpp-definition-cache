@@ -1,0 +1,71 @@
+[
+    {
+        "file": "/home/ckonsa/ClusterPatientsTrajectories/src/functions.cpp",
+        "file_last_write": 1715603388.0,
+        "definitions": [
+            {
+                "usr": "c:@F@addTwoVectors#I#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "addTwoVectors(int, int)",
+                "file": "/home/ckonsa/ClusterPatientsTrajectories/src/functions.cpp",
+                "line": 16,
+                "column": 17
+            },
+            {
+                "usr": "c:@F@collectPatientData#I#I#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "collectPatientData(int, int, int)",
+                "file": "/home/ckonsa/ClusterPatientsTrajectories/src/functions.cpp",
+                "line": 34,
+                "column": 6
+            },
+            {
+                "usr": "c:@F@addStrings#I#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "addStrings(int, int)",
+                "file": "/home/ckonsa/ClusterPatientsTrajectories/src/functions.cpp",
+                "line": 53,
+                "column": 13
+            },
+            {
+                "usr": "c:@F@compareDrugTrajectories#I#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "compareDrugTrajectories(int, int)",
+                "file": "/home/ckonsa/ClusterPatientsTrajectories/src/functions.cpp",
+                "line": 70,
+                "column": 15
+            },
+            {
+                "usr": "c:@F@compareDrugTrajectoriesWithDTW#I#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "compareDrugTrajectoriesWithDTW(int, int)",
+                "file": "/home/ckonsa/ClusterPatientsTrajectories/src/functions.cpp",
+                "line": 110,
+                "column": 15
+            },
+            {
+                "usr": "c:@F@countDrugsInCluster#I#I#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "countDrugsInCluster(int, int, int)",
+                "file": "/home/ckonsa/ClusterPatientsTrajectories/src/functions.cpp",
+                "line": 167,
+                "column": 15
+            },
+            {
+                "usr": "c:@F@normalize#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "normalize(int)",
+                "file": "/home/ckonsa/ClusterPatientsTrajectories/src/functions.cpp",
+                "line": 189,
+                "column": 15
+            }
+        ]
+    }
+]

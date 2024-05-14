@@ -1,0 +1,23 @@
+{
+    "args": [
+        "-I/usr/lib/llvm-7/lib/clang/7.0.1/include",
+        "-I/usr/include/c++/8",
+        "-I/usr/include/x86_64-linux-gnu/c++/8",
+        "-I/usr/include/c++/8/backward",
+        "-I/usr/lib/gcc/x86_64-linux-gnu/8/include",
+        "-I/usr/local/include",
+        "-I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed",
+        "-I/usr/include/x86_64-linux-gnu",
+        "-I/usr/include",
+        "-std=gnu++11",
+        "-I/usr/share/R/include",
+        "-DNDEBUG",
+        "-fpic",
+        "-fdebug-prefix-map=/home/jranke/git/r-backports/buster/r-base-4.0.3=.",
+        "-fstack-protector-strong",
+        "-D_FORTIFY_SOURCE=2"
+    ],
+    "pch": "",
+    "is_cpp": true,
+    "hash": "1715606383"
+}

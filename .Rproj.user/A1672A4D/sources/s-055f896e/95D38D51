@@ -1,0 +1,24 @@
+{
+    "id": "95D38D51",
+    "path": "~/ClusterPatientsTrajectories/shiny/server.R",
+    "project_path": "shiny/server.R",
+    "type": "r_source",
+    "hash": "2856236680",
+    "contents": "",
+    "dirty": false,
+    "created": 1715660949515.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "cursorPosition": "5,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1715663076,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1715663076172,
+    "read_only": false,
+    "read_only_alternatives": []
+}
