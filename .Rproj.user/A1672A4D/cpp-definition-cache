@@ -1,69 +1,69 @@
 [
     {
         "file": "/home/ckonsa/ClusterPatientsTrajectories/src/functions.cpp",
-        "file_last_write": 1715603388.0,
+        "file_last_write": 1716308939.0,
         "definitions": [
             {
-                "usr": "c:@F@addTwoVectors#I#I#",
+                "usr": "c:@F@addTwoVectors#$@N@Rcpp@S@Vector>#VI16#@N@Rcpp@ST>1#T@PreserveStorage#S0_#",
                 "kind": 6,
                 "parent_name": "",
-                "name": "addTwoVectors(int, int)",
+                "name": "addTwoVectors(Rcpp::CharacterVector, Rcpp::CharacterVector)",
                 "file": "/home/ckonsa/ClusterPatientsTrajectories/src/functions.cpp",
                 "line": 16,
                 "column": 17
             },
             {
-                "usr": "c:@F@collectPatientData#I#I#I#",
+                "usr": "c:@F@collectPatientData#$@N@Rcpp@S@DataFrame_Impl>#@N@Rcpp@ST>1#T@PreserveStorage#$@N@Rcpp@S@Vector>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#I#",
                 "kind": 6,
                 "parent_name": "",
-                "name": "collectPatientData(int, int, int)",
+                "name": "collectPatientData(Rcpp::DataFrame, Rcpp::NumericVector, int)",
                 "file": "/home/ckonsa/ClusterPatientsTrajectories/src/functions.cpp",
-                "line": 34,
+                "line": 33,
                 "column": 6
             },
             {
-                "usr": "c:@F@addStrings#I#I#",
+                "usr": "c:@F@addStrings#$@N@std@N@__cxx11@S@basic_string>#C#$@N@std@S@char_traits>#C#$@N@std@S@allocator>#C#S0_#",
                 "kind": 6,
                 "parent_name": "",
-                "name": "addStrings(int, int)",
+                "name": "addStrings(std::string, std::string)",
                 "file": "/home/ckonsa/ClusterPatientsTrajectories/src/functions.cpp",
-                "line": 53,
+                "line": 52,
                 "column": 13
             },
             {
-                "usr": "c:@F@compareDrugTrajectories#I#I#",
+                "usr": "c:@F@compareDrugTrajectories#$@N@Rcpp@S@Vector>#VI19#@N@Rcpp@ST>1#T@PreserveStorage#$@N@Rcpp@S@Vector>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#",
                 "kind": 6,
                 "parent_name": "",
-                "name": "compareDrugTrajectories(int, int)",
+                "name": "compareDrugTrajectories(Rcpp::List, Rcpp::NumericVector)",
                 "file": "/home/ckonsa/ClusterPatientsTrajectories/src/functions.cpp",
-                "line": 70,
+                "line": 69,
                 "column": 15
             },
             {
-                "usr": "c:@F@compareDrugTrajectoriesWithDTW#I#I#",
+                "usr": "c:@F@compareDrugTrajectoriesWithDTW#$@N@Rcpp@S@Vector>#VI19#@N@Rcpp@ST>1#T@PreserveStorage#$@N@Rcpp@S@Vector>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#",
                 "kind": 6,
                 "parent_name": "",
-                "name": "compareDrugTrajectoriesWithDTW(int, int)",
+                "name": "compareDrugTrajectoriesWithDTW(Rcpp::List, Rcpp::NumericVector)",
                 "file": "/home/ckonsa/ClusterPatientsTrajectories/src/functions.cpp",
-                "line": 110,
+                "line": 109,
                 "column": 15
             },
             {
-                "usr": "c:@F@countDrugsInCluster#I#I#I#",
+                "usr": "c:@F@countDrugsInCluster#$@N@Rcpp@S@DataFrame_Impl>#@N@Rcpp@ST>1#T@PreserveStorage#$@N@Rcpp@S@Vector>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#$@N@Rcpp@S@Vector>#VI16#@N@Rcpp@ST>1#T@PreserveStorage#",
                 "kind": 6,
                 "parent_name": "",
-                "name": "countDrugsInCluster(int, int, int)",
+                "name": "countDrugsInCluster(Rcpp::DataFrame, Rcpp::NumericVector, Rcpp::CharacterVector)",
                 "file": "/home/ckonsa/ClusterPatientsTrajectories/src/functions.cpp",
-                "line": 167,
+                "line": 166,
                 "column": 15
             },
             {
-                "usr": "c:@F@normalize#I#",
+                "usr": "c:@F@normalize#$@N@Rcpp@S@Matrix>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#",
                 "kind": 6,
                 "parent_name": "",
-                "name": "normalize(int)",
+                "name": "normalize(Rcpp::NumericMatrix)",
                 "file": "/home/ckonsa/ClusterPatientsTrajectories/src/functions.cpp",
-                "line": 189,
+                "line": 188,
                 "column": 15
             }
         ]

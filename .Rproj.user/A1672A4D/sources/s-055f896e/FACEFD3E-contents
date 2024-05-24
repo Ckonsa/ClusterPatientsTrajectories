@@ -4,15 +4,15 @@
 #include<limits>
 using namespace Rcpp;
 
-// Add two CharacterVectors.
-// Input:
-//   - v1: CharacterVector
-//   - v2: CharacterVector
-// Output:
-//   - CharacterVector that has all the elements of the given vectors. Elements in v1 come first.
-// Example:
-//   - addTwoVectors(c("A", "B", "C"), c("D", "E", "F")) => c("A", "B", "C", "D", "E", "F")
-//   - addTwoVectors(c("D", "E", "F"), c("A", "B", "C")) => c(D", "E", "F", "A", "B", "C")
+//' Add two CharacterVectors.
+//'
+//' @name addTwoVectors
+//' @param v1: CharacterVector
+//' @param v2: CharacterVector
+//' @return CharacterVector that has all the elements of the given vectors. Elements in v1 come first.
+//' @examples
+//' addTwoVectors(c("A", "B", "C"), c("D", "E", "F")) => c("A", "B", "C", "D", "E", "F")
+//' addTwoVectors(c("D", "E", "F"), c("A", "B", "C")) => c("D", "E", "F", "A", "B", "C")
 CharacterVector addTwoVectors(CharacterVector v1, CharacterVector v2) {
   for (int i = 0; i < v2.size(); i++) {
     v1.push_back(v2[i]);
@@ -20,16 +20,15 @@ CharacterVector addTwoVectors(CharacterVector v1, CharacterVector v2) {
   return v1;
 }
 
-// Collect data about patients.
-// Finds drug trajectory for every patient.
-// Input:
-//   - data: dataframe
-//   - IDs: numeric vector
-//   - n: integer, n > 0 - length of drug trajectory
-// Output:
-//   - list with vectors named "IDs" and "drugs".
-//     "IDs" hold information about patients IDs and
-//     "drugs" contains n-length drug trajectory per patient
+//' Collect data about patients.
+//'
+//' Finds drug trajectory for every patient.
+//'
+//' @param data: dataframe
+//' @param IDs: numeric vector
+//' @param n: integer, n > 0 - length of drug trajectory
+//' @return list with vectors named "IDs" and "drugs". "IDs" hold information about patients IDs and "drugs" contains n-length drug trajectory per patient
+//' @export
 // [[Rcpp::export]]
 List collectPatientData(DataFrame data, NumericVector IDs, int n) {
   Function getDrugTrajectory("get_patient_drug_trajectory");
@@ -41,15 +40,15 @@ List collectPatientData(DataFrame data, NumericVector IDs, int n) {
   return List::create(Named("IDs") = IDs, Named("drugs") = drugTrajectories);
 }
 
-// Add two strings alphabetically.
-// Input:
-//   - s1: string
-//   - s2: string
-// Output:
-//   - string which contains given strings
-// Example:
-//   - addStrings("abc", "def") => "abcdef"
-//   - addStrings("def", "abc") => "abcdef"
+//' Add two strings alphabetically.
+//'
+//' @name addStrings
+//' @param s1: string
+//' @param s2: string
+//' @return string which contains given strings
+//' @examples
+//' addStrings("abc", "def") => "abcdef"
+//' addStrings("def", "abc") => "abcdef"
 std::string addStrings(std::string s1, std::string s2) {
   std::string firstString = s1;
   std::string lastString = s2;
@@ -60,12 +59,12 @@ std::string addStrings(std::string s1, std::string s2) {
   return(firstString + lastString);
 }
 
-// Compare patients drug trajectories.
-// Input:
-//   - patientsData: list with patient IDs and their drug trajectories
-//   - punishments: numeric vector
-// Output:
-//   - numeric matrix with distances between patients drug trajectories
+//' Compare patients drug trajectories.
+//'
+//' @param patientsData: list with patient IDs and their drug trajectories
+//' @param punishments: numeric vector
+//' @return numeric matrix with distances between patients drug trajectories
+//' @export
 // [[Rcpp::export]]
 NumericMatrix compareDrugTrajectories(List patientsData, NumericVector punishments) {
   Function distanceBetweenCodes("distance_between_codes");
@@ -100,12 +99,12 @@ NumericMatrix compareDrugTrajectories(List patientsData, NumericVector punishmen
   return matrix;
 }
 
-// Compare patients drug trajectories with DTW algorithm.
-// Input:
-//   - patientsData: list with patient IDs and their drug trajectories
-//   - punishments: numeric vector
-// Output:
-//   - numeric matrix with distances between patients drug trajectories
+//' Compare patients drug trajectories with DTW algorithm.
+//'
+//' @param patientsData: list with patient IDs and their drug trajectories
+//' @param punishments: numeric vector
+//' @return numeric matrix with distances between patients drug trajectories
+//' @export
 // [[Rcpp::export]]
 NumericMatrix compareDrugTrajectoriesWithDTW(List patientsData, NumericVector punishments) {
   Function distanceBetweenCodes("distance_between_codes");
@@ -156,13 +155,13 @@ NumericMatrix compareDrugTrajectoriesWithDTW(List patientsData, NumericVector pu
   return matrix;
 }
 
-// Find the occurrences of given drugs per patient.
-// Input:
-//   - data: dataframe
-//   - IDs: numeric vector
-//   - drugs: character vector
-// Output:
-//   - numeric matrix which has count of given drugs per patient
+//' Find the occurrences of given drugs per patient.
+//'
+//' @param data: dataframe
+//' @param IDs: numeric vector
+//' @param drugs: character vector
+//' @return numeric matrix which has count of given drugs per patient
+//' @export
 // [[Rcpp::export]]
 NumericMatrix countDrugsInCluster(DataFrame data, NumericVector IDs, CharacterVector drugs) {
   Function countAllDrugs("count_all_patient_drugs");
@@ -180,11 +179,11 @@ NumericMatrix countDrugsInCluster(DataFrame data, NumericVector IDs, CharacterVe
   return matrix;
 }
 
-// Normalize all non-zero values in matrix with log10.
-// Input:
-//   - values: numeric matrix
-// Output:
-//   - matrix where all non-zero values have been normalized.
+//' Normalize all non-zero values in matrix with log10.
+//'
+//' @param values: numeric matrix
+//' @return matrix where all non-zero values have been normalized.
+//' @export
 // [[Rcpp::export]]
 NumericMatrix normalize(NumericMatrix values) {
   for (int i = 0; i < values.rows(); i++) {

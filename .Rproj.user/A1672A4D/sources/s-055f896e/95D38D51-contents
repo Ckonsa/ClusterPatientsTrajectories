@@ -6,23 +6,22 @@ library(grid)
 
 background_color <- "#e9f4fb"
 
-# Gets the count of most extreme value in a column.
-# Can find the maximal and minimal frequency.
-# Input:
-#   - data: dataframe
-#   - column: string
-#   - max_value: boolean if we want to get the maximal frequency
-# Output:
-#   - maximal or minimal frequency in data column
+#' Gets the count of most extreme value in a column.
+#'
+#' Can find the maximal and minimal frequency.
+#'
+#' @param data: dataframe
+#' @param column: string
+#' @param max_value: boolean if we want to get the maximal frequency
+#' @return maximal or minimal frequency in data column
 get_column_extreme_value_count <- function(data, column, max_value = TRUE) {
   ifelse(max_value, return(max(table(data[column]))), return(min(table(data[column]))))
 }
 
-# Gets every patients' records count.
-# Input:
-#   - data: dataframe
-# Output:
-#   - vector with patients' records count
+#' Gets every patients' records count.
+#'
+#' @param data: dataframe
+#' @return vector with patients' records count
 get_patients_records_count <- function(data) {
   patients_by_id <- data %>%
     group_by(SUBJECT_ID) %>%
@@ -30,20 +29,18 @@ get_patients_records_count <- function(data) {
   return(patients_by_id$records_count)
 }
 
-# Gets mean of patients' records count.
-# Input:
-#   - data: dataframe
-# Output:
-#   - patients' records count mean as numeric
+#' Gets mean of patients' records count.
+#'
+#' @param data: dataframe
+#' @return patients' records count mean as numeric
 get_records_mean <- function(data) {
   return(mean(get_patients_records_count(data)))
 }
 
-# Gets records range for data, that includes at least 50% of patients.
-# Input:
-#   - data: dataframe
-# Output:
-#   - vector with records range
+#' Gets records range for data, that includes at least 50% of patients.
+#'
+#' @param data: dataframe
+#' @return vector with records range
 get_records_range <- function(data) {
   patients_records <- sort(get_patients_records_count(data))
   patient_count <- 0.5 * length(patients_records)
@@ -53,13 +50,13 @@ get_records_range <- function(data) {
   return(c(records_range_min, records_range_max))
 }
 
-# Rounds given value to first upper or lower tens.
-# Can round up or down.
-# Input:
-#   - value: numeric
-#   - round-up: boolean if we want to round up
-# Output:
-#   - numeric rounded value
+#' Rounds given value to first upper or lower tens.
+#'
+#' Can round up or down.
+#'
+#' @param value: numeric
+#' @param round-up: boolean if we want to round up
+#' @return numeric rounded value
 get_rounded_value <- function(value, round_up = TRUE) {
   ifelse(round_up, f <- ceiling, f <- floor)
   return(plyr::round_any(value, 10, f = f))
@@ -127,7 +124,7 @@ server <- function(input, output, session) {
       } else if (name == "trajectory_length" & previous_values[["first_run"]] == TRUE) {
         # Calculates trajectory length default value
         changed_inputs <- append(changed_inputs, name)
-        default_trajectory_length <- round(get_records_mean(data()), TRUE)
+        default_trajectory_length <- round(get_records_mean(data()))
         previous_inputs[[name]] <- default_trajectory_length
         updateSliderInput(session, "trajectory_length", value = default_trajectory_length)
 

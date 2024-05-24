@@ -9,15 +9,17 @@
         "-I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed",
         "-I/usr/include/x86_64-linux-gnu",
         "-I/usr/include",
+        "-I/home/ckonsa/R/x86_64-pc-linux-gnu-library/4.0/Rcpp/include",
         "-std=gnu++11",
         "-I/usr/share/R/include",
         "-DNDEBUG",
         "-fpic",
         "-fdebug-prefix-map=/home/jranke/git/r-backports/buster/r-base-4.0.3=.",
         "-fstack-protector-strong",
-        "-D_FORTIFY_SOURCE=2"
+        "-D_FORTIFY_SOURCE=2",
+        "-fdiagnostics-color=always"
     ],
-    "pch": "",
+    "pch": "Rcpp",
     "is_cpp": true,
-    "hash": "1715606383"
+    "hash": "1716307364"
 }
